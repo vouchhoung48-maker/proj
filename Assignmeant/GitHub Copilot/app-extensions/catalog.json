@@ -1,0 +1,7 @@
+[
+	{
+		"packageId": "com.microsoft.azure-devops",
+		"directory": "azure-devops",
+		"featureFlag": "azure_devops"
+	}
+]

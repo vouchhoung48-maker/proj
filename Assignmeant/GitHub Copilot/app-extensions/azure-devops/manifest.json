@@ -1,0 +1,47 @@
+{
+	"id": "com.microsoft.azure-devops",
+	"version": "0.1.0",
+	"engines": {
+		"github-app": "^0.1.0"
+	},
+	"activations": [
+		{
+			"id": "app",
+			"owner": "app",
+			"entry": {
+				"node": "./app.mjs"
+			},
+			"contributes": {
+				"forgeProviders": [
+					{
+						"id": "azure-devops",
+						"title": "Azure DevOps"
+					}
+				],
+				"canvases": [
+					{
+						"id": "repository-picker",
+						"title": "Azure DevOps hosting preview",
+						"inputSchema": {
+							"type": "object",
+							"additionalProperties": false
+						},
+						"actions": [
+							{
+								"name": "refresh-description",
+								"title": "Refresh provider description",
+								"inputSchema": {
+									"type": "object",
+									"additionalProperties": false
+								}
+							}
+						],
+						"requires": {
+							"forgeProvider": "azure-devops"
+						}
+					}
+				]
+			}
+		}
+	]
+}
